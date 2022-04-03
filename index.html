@@ -20,8 +20,9 @@
 <body>
     <!-- HEADER -->
     <header class="header" id="header">
-        <nav class="navbar navbar-expand-xl h-100">
+        <nav class="navbar h-100">
             <div class="container-fluid h-100">
+                <!-- menu-btn -->
                 <button class="navbar-toggler header__menu d-flex justify-content-start align-items-center" data-bs-toggle="collapse" data-bs-target="#aside">
                     <i class="me-2 fa fa-bars"></i>
                     Menu
@@ -35,54 +36,54 @@
                     <a href="">
                         About Us
                     </a>
+                    <!-- search-btn -->
                     <button class="btn-search navbar-toggler" data-bs-toggle="collapse" data-bs-target="#searchBar">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
-                <!-- </div> -->
             </div>
         </nav>
-        <aside class="collapse navbar-collapse bg-dark" id="aside">
+
+        <!-- search -->
+        <div class="header__search collapse navbar-collapse" id="searchBar">
+            <div class="container-fluid px-0 navbar-nav">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Type here">
+                    <a href="#" class="btn-search links">Search
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <!-- aside -->
+        <aside class="collapse navbar-collapse header__aside" id="aside">
             <div class="navbar-nav">
                 <div class="header__aside__item">
                     <a href="#" class="nav-link">
-                        Home
+                        <i class="fa fa-home"></i> Home
                     </a>
                 </div>
 
                 <div class="header__aside__item">
-                    <a class="nav-link">
-                        Our brands</a>
-                    <ul>
-                        <li><a href="#">Honda
-                                Autos</a>
-                        </li>
-
-                        <li><a href="#">Acura Autos</a>
-                        </li>
-
-                        <li><a href="#">Honda
-                                Powersports</a>
-                        </li>
-
-                        <li><a href="#">Honda
-                                Power
-                                Equipment</a></li>
-                        <li><a href="#">Honda
-                                Engines</a>
-                        </li>
-                        <li><a href="#">Honda
-                                Marine</a>
-                        </li>
-                        <li><a href="#">HondaJet</a>
-                        </li>
+                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#ourBrands">
+                        <i class="fa fa-plus"></i> Our brands</a>
+                    <ul class="collapse navbar-collapse" id="ourBrands">
+                        <li><a href="#">Honda Autos</a></li>
+                        <li><a href="#">Acura Autos</a></li>
+                        <li><a href="#">Honda Powersports</a></li>
+                        <li><a href="#">Honda Power Equipment</a></li>
+                        <li><a href="#">Honda Engines</a></li>
+                        <li><a href="#">Honda Marine</a></li>
+                        <li><a href="#">HondaJet</a></li>
                         <li><a href="#">ASIMO</a></li>
                     </ul>
                 </div>
 
                 <div class="header__aside__item">
-                    <a class="nav-link">About us</a>
-                    <ul>
+                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#aboutUs">
+                        <i class="fa fa-plus"></i>About us</a>
+                    <ul class="collapse navbar-collapse" id="aboutUs">
                         <li><a href="#">The Power of Dreams</a></li>
                         <li><a href="#">Mobility</a></li>
                         <li><a href="#">Environment</a></li>
@@ -96,60 +97,42 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a class="nav-link">Racing</a>
-                    <ul>
-                        <li><a href="#">Auto Racing</a>
-                        </li>
+                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#racing">
+                        <i class="fa fa-plus"></i>Racing</a>
+                    <ul class="collapse navbar-collapse" id="racing">
+                        <li><a href="#">Auto Racing</a></li>
                         <li><a href="#">Motorcycle Racing</a></li>
                     </ul>
 
                 </div>
 
                 <div class="header__aside__item">
-                    <a class="nav-link">Recalls</a>
-                    <ul>
+                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#recalls">
+                        <i class="fa fa-plus"></i>Recalls</a>
+                    <ul class="collapse navbar-collapse" id="recalls">
                         <li><a href="#">Honda Recalls</a></li>
                         <li><a href="#">Acura Recalls</a></li>
-                        <li><a href="#">Powersports
-                                Recalls</a></li>
+                        <li><a href="#">Powersports Recalls</a></li>
                         <li><a href="#">Power Equipment Recalls</a></li>
-                        <li><a href="#">Marine
-                                Recalls</a></li>
+                        <li><a href="#">Marine Recalls</a></li>
                         <li><a href="#">Engines Recalls</a></li>
                     </ul>
                 </div>
 
                 <div class="header__aside__item">
-                    <a class="nav-link">
-                        Services</a>
-                    <ul>
-                        <li><a href="#">Honda
-                                Financial Services</a></li>
-                        <li><a href="#">Honda
-                                Owners</a>
-                        </li>
-                        <li><a href="#">Acura
-                                Financial Services</a></li>
-                        <li><a href="#">Acura
-                                Owners</a>
-                        </li>
+                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#services">
+                        <i class="fa fa-plus"></i>Services</a>
+                    <ul class="collapse navbar-collapse" id="services">
+                        <li><a href="#">Honda Financial Services</a></li>
+                        <li><a href="#">Honda Owners</a></li>
+                        <li><a href="#">Acura Financial Services</a></li>
+                        <li><a href="#">Acura Owners</a></li>
                     </ul>
                 </div>
             </div>
         </aside>
-
-        <!-- search -->
-        <div class="header__search collapse navbar-collapse" id="searchBar">
-            <div class="container-fluid px-0 navbar-nav">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Type here">
-                    <a href="#" class="btn-search links">Search
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </form>
-            </div>
-        </div>
     </header>
+
     <!-- ALERT -->
     <section class="alert-bar">
         <div class="alert-bar__items h-100 ">
@@ -171,7 +154,7 @@
 
             <div class="alert-bar__item d-flex align-items-center h-100">
                 <div class="h-100 alert-bar__header">
-                    <div class="alert-bar__title d-flex align-items-center text-white h-100">
+                    <div class="alert-bar__title d-flex align-items-center h-100">
                         <i class="fa fa-exclamation-circle"></i>
                         <h1 class="ms-3">Airbag Recall</h1>
                     </div>
@@ -186,6 +169,7 @@
             </div>
         </div>
     </section>
+
     <!-- CAROUSEL -->
     <section class="carousel">
         <div class="carousel__content">
@@ -197,6 +181,7 @@
             </div>
         </div>
     </section>
+
     <!-- PRODUCTS -->
     <section class="products">
         <div class="container-fluid">
@@ -204,13 +189,13 @@
                 <div class="products__item col-6 ">
                     <div class="row">
                         <div class="col-4">
-                            <div class="products__logo products__logo--blue products__logo--right products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--blue products__logo--right products__logo--arrow-blue products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_autos.webp">
                                 <p>Honda autos</p>
                                 <span>GO</span>
                             </div>
 
-                            <div class="products__logo products__logo--light products__logo--bottom products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--light products__logo--bottom products__logo--arrow-light products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_corporate_red.webp">
                                 <p>Generators, mowers & power equipment</p>
                                 <span>GO</span>
@@ -225,7 +210,7 @@
                 <div class="products__item col-6">
                     <div class="row">
                         <div class="col-4">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_powersports.webp">
                                 <p>Motorcycles, ATVs, scooters, SxS</p>
                                 <span>GO</span>
@@ -239,7 +224,7 @@
                         </div>
 
                         <div class="col-4">
-                            <div class="products__logo products__logo--dark products__logo--left products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--dark products__logo--left products__logo--arrow-dark products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_acura.webp">
                                 <p>Acura autos</p>
                                 <span>GO</span>
@@ -253,14 +238,14 @@
                         <div class="col-6"><img class="products__img img-fluid vh-1-3" src="./images/hinh14.jpg" alt="h14">
                         </div>
                         <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_jet.webp">
                                 <p>Honda aircraft company</p>
                                 <span>GO</span>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_autos.webp">
                                 <p>General purpose engines</p>
                                 <span>GO</span>
@@ -286,15 +271,15 @@
                         <div class="col-12"><img class="products__img img-fluid vh-1-3" src="./images/hinh9.jpg" alt="h9">
                         </div>
                         <div class="col-6">
-                            <div class="products__logo products__logo--light products__logo--left products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
+                            <div class="products__logo products__logo--light products__logo--left products__logo--arrow-light products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
                                 <img src="./images/logo/logo_honda_corporate_red.webp">
                                 <p>Outboard motos</p>
                                 <span>GO</span>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--top products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_corporate_red.webp">
+                            <div class="products__logo products__logo--red products__logo--top products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
+                                <img src="./images/logo/logo_honda_racing.webp">
                                 <p>Auto racing</p>
                                 <span>GO</span>
                             </div>
@@ -304,15 +289,17 @@
             </div>
         </div>
     </section>
+
     <!-- COMPANY -->
     <section class="company">
         <header>
-            <div class="container-fluid">
+            <div class="container">
                 <h1 class="title title-2 text-center">
                     Our company
                 </h1>
             </div>
         </header>
+
         <main>
             <div class="container-fluid">
                 <div class="row">
@@ -320,10 +307,10 @@
                         <div class="company__img">
                             <img class="img-fluid" src="./images/hinh20.jpg" alt="h20">
                         </div>
+                        <h1 class="company__item__title title title-1 text-white mb-4">
+                            Mobility
+                        </h1>
                         <div class="company__info text-center">
-                            <h1 class="title title-1 text-white mb-4">
-                                Mobility
-                            </h1>
                             <p class="pt-4">
                                 We're creating tomorrow's world to elevate the joy and freedom of mobility for all.
                             </p>
@@ -335,10 +322,10 @@
                         <div class="company__img">
                             <img class="img-fluid" src="./images/hinh19.jpg" alt="h19">
                         </div>
+                        <h1 class="company__item__title title title-1 text-white mb-4">
+                            Environment
+                        </h1>
                         <div class="company__info text-center">
-                            <h1 class="title title-1 text-white mb-4">
-                                Environment
-                            </h1>
                             <p class="pt-4">
                                 We're reducing our environmental footprint at every step to help preserve the planet for future generations.
                             </p>
@@ -350,10 +337,10 @@
                         <div class="company__img">
                             <img class="img-fluid" src="./images/hinh18.jpg" alt="h18">
                         </div>
+                        <h1 class="company__item__title title title-1 text-white mb-4">
+                            Community
+                        </h1>
                         <div class="company__info text-center">
-                            <h1 class="title title-1 text-white mb-4">
-                                Community
-                            </h1>
                             <p class="pt-4">
                                 We've always been deeply involved in the communities where we work and live.
                             </p>
@@ -365,10 +352,10 @@
                         <div class="company__img">
                             <img class="img-fluid" src="./images/hinh21.jpg" alt="h21">
                         </div>
+                        <h1 class="company__item__title title title-1 text-white mb-4">
+                            Safety
+                        </h1>
                         <div class="company__info text-center">
-                            <h1 class="title title-1 text-white mb-4">
-                                Safety
-                            </h1>
                             <p class="pt-4">
                                 Honda envisions a future where collisions are a thing of the past. See how we'll get there starting with our model year 2040 vehicles.
                             </p>
@@ -385,8 +372,8 @@
             <div class="power__content text-center">
                 <h1 class="power__title title title-1 text-black">The power of dreams</h1>
                 <p class="mb-4">See what makes a Honda, who makes a Honda, how we got here, and where we're headed.</p>
-                <a class="links text-black py-2" href="">More <i class="fa fa-angle-right"></i></a>
-            </div>
+                <a class="links text-black py-2" href="">More
+                    <i class="fa fa-angle-right"></i></a>
             </div>
         </header>
     </section>
@@ -403,7 +390,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-4 what__item">
-                        <div class="what__img"><img class="img-fluid" src="./images/hinh16.jpg" alt="h16"></div>
+                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh16.jpg" alt="h16"></a>
                         <div class="what__info text-center">
                             <h1 class="title title-2 what__info__title mb-4">Honda collection hall</h1>
                             <p class="mb-2">
@@ -414,8 +401,8 @@
                     </div>
 
                     <div class="col-4 what__item">
-                        <div class="what__img"><img class="img-fluid" src="./images/podcast-logo.webp" alt="podcast">
-                        </div>
+                        <a href="#" class="what__img"><img class="img-fluid" src="./images/podcast-logo.webp" alt="podcast">
+                        </a>
                         <div class="what__info text-center">
                             <h1 class="title title-2 what__info__title mb-4">Honda stories</h1>
                             <p class="mb-2">
@@ -426,7 +413,8 @@
                     </div>
 
                     <div class="col-4 what__item">
-                        <div class="what__img"><img class="img-fluid" src="./images/hinh7.webp" alt="h7"></div>
+                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh7.webp" alt="h7">
+                        </a>
                         <div class="what__info text-center">
                             <h1 class="title title-2 what__info__title mb-4">Interior design philosophy</h1>
                             <p class="mb-2">
@@ -472,9 +460,9 @@
                         </div>
                     </div>
 
-                    <div class="col-4 what__item what__icon__ins">
-                        <a class="what__img"><img class="img-fluid" src="./images/hinh4.jpg" alt="h4"></a>
-                        <div class="what__icon">
+                    <div class="col-4 what__item">
+                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh5.jpg" alt="h5"></a>
+                        <div class="what__icon what__icon__ins">
                             <i class="fab fa-instagram"></i>
                         </div>
                     </div>
