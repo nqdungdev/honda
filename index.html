@@ -13,6 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- SLICK LIBRARY -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -25,7 +27,7 @@
                 <!-- menu-btn -->
                 <button class="navbar-toggler header__menu d-flex justify-content-start align-items-center" data-bs-toggle="collapse" data-bs-target="#aside">
                     <i class="me-2 fa fa-bars"></i>
-                    Menu
+                    <span class="d-none d-sm-block">Menu</span>
                 </button>
 
                 <a href="" class="header__logo">
@@ -33,12 +35,13 @@
                 </a>
 
                 <div class="header__about-us d-flex justify-content-between align-items-center">
-                    <a href="">
+                    <a class="d-none d-md-block" href="">
                         About Us
                     </a>
                     <!-- search-btn -->
                     <button class="btn-search navbar-toggler" data-bs-toggle="collapse" data-bs-target="#searchBar">
-                        <i class="fa fa-search"></i>
+                        <i class="js-open fa fa-search"></i>
+                        <i class="js-close fa fa-times" style="display: none;"></i>
                     </button>
                 </div>
             </div>
@@ -140,11 +143,11 @@
                 <div class="h-100 alert-bar__header">
                     <div class="alert-bar__title d-flex align-items-center text-white h-100">
                         <i class="fa fa-exclamation-circle"></i>
-                        <h1 class="ms-3">Our consumers' rights</h1>
+                        <h1 class="ms-5 ms-lg-3">Our consumers' rights</h1>
                     </div>
                     <div class="alert-bar__stretch"></div>
                 </div>
-                <div class="alert-bar__detail d-flex align-items-center">
+                <div class="mt-4 mt-lg-0 alert-bar__detail d-block d-lg-flex align-items-center">
                     <h1>Fight for equal EV tax incentives</h1>
                     <a class="links ms-5" href="">More
                         <i class="fa fa-angle-right"></i>
@@ -154,13 +157,13 @@
 
             <div class="alert-bar__item d-flex align-items-center h-100">
                 <div class="h-100 alert-bar__header">
-                    <div class="alert-bar__title d-flex align-items-center h-100">
+                    <div class="alert-bar__title d-flex align-items-center text-white h-100">
                         <i class="fa fa-exclamation-circle"></i>
-                        <h1 class="ms-3">Airbag Recall</h1>
+                        <h1 class="ms-5 ms-lg-3">Airbag Recall</h1>
                     </div>
                     <div class="alert-bar__stretch"></div>
                 </div>
-                <div class="alert-bar__detail d-flex align-items-center">
+                <div class="mt-4 mt-lg-0 alert-bar__detail d-block d-lg-flex align-items-center">
                     <h1>Important Information About Airbag Recalls</h1>
                     <a class="links ms-5" href="">More
                         <i class="fa fa-angle-right"></i>
@@ -174,10 +177,10 @@
     <section class="carousel">
         <div class="carousel__content">
             <div class="carousel__item">
-                <img class="img-fluid" src="./images/carrousel-img.webp" alt="c1">
+                <img class="img-fluid" src="./images/carrousel1.jpg" alt="c1">
             </div>
             <div class="carousel__item">
-                <img class="img-fluid" src="./images/carrousel-img.webp" alt="c1">
+                <img class="img-fluid" src="./images/carrousel2.jpg" alt="c2">
             </div>
         </div>
     </section>
@@ -185,109 +188,82 @@
     <!-- PRODUCTS -->
     <section class="products">
         <div class="container-fluid">
-            <div class="row">
-                <div class="products__item col-6 ">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="products__logo products__logo--blue products__logo--right products__logo--arrow-blue products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_autos.webp">
-                                <p>Honda autos</p>
-                                <span>GO</span>
-                            </div>
-
-                            <div class="products__logo products__logo--light products__logo--bottom products__logo--arrow-light products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_corporate_red.webp">
-                                <p>Generators, mowers & power equipment</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-
-                        <div class="col-8"><img class="products__img  img-fluid vh-2-3" src="./images/hinh10.webp" alt="h10">
-                        </div>
-                    </div>
+            <div class="row products__items">
+                <div class="products__item products__item--1 products__logo products__logo--blue products__logo--right  products__logo--lg-right products__logo--sm-right products__logo--text-white d-flex justify-content-center align-items-center flex-column animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_autos.webp">
+                    <p>Honda autos</p>
+                    <span>GO</span>
                 </div>
 
-                <div class="products__item col-6">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_powersports.webp">
-                                <p>Motorcycles, ATVs, scooters, SxS</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-
-                        <div class="col-8"><img class="products__img img-fluid vh-1-3" src="./images/hinh15.jpg" alt="h15">
-                        </div>
-
-                        <div class="col-8"><img class="products__img img-fluid vh-1-3" src="./images/hinh8.webp" alt="h8">
-                        </div>
-
-                        <div class="col-4">
-                            <div class="products__logo products__logo--dark products__logo--left products__logo--arrow-dark products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_acura.webp">
-                                <p>Acura autos</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="products__item products__item--2 products__img animate__animated animate__fadeInUp wow"><img class="img-animation img-fluid" src="./images/hinh10.webp" alt="h10">
                 </div>
 
-                <div class="products__item col-4">
-                    <div class="row">
-                        <div class="col-6"><img class="products__img img-fluid vh-1-3" src="./images/hinh14.jpg" alt="h14">
-                        </div>
-                        <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_jet.webp">
-                                <p>Honda aircraft company</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--right products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_autos.webp">
-                                <p>General purpose engines</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <img class="products__img img-fluid vh-1-3" src="./images/hinh11.jpg" alt="h11">
-                        </div>
-                    </div>
+                <div class="products__item products__item--3 products__logo products__logo--red products__logo--right products__logo--lg-bottom products__logo--sm-left products__logo--text-white d-flex justify-content-center align-items-center flex-column products__logo__arrow-fix--1 animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_powersports.webp">
+                    <p>Motorcycles, ATVs, scooters, SxS</p>
+                    <span>GO</span>
                 </div>
 
-                <div class="products__item col-4">
-                    <div class="row">
-                        <div class="col-12"><img class="products__img img-fluid vh-1-3" src="./images/hinh12.jpg" alt="h12">
-                        </div>
-                        <div class="col-12"><img class="products__img img-fluid vh-1-3" src="./images/hinh13.webp" alt="h13">
-                        </div>
-                    </div>
+                <div class="products__item products__item--4 products__img animate__animated animate__fadeInUp wow"><img class="img-animation img-fluid" src="./images/hinh15.jpg" alt="h15">
                 </div>
 
-                <div class="products__item col-4">
-                    <div class="row">
-                        <div class="col-12"><img class="products__img img-fluid vh-1-3" src="./images/hinh9.jpg" alt="h9">
-                        </div>
-                        <div class="col-6">
-                            <div class="products__logo products__logo--light products__logo--left products__logo--arrow-light products__logo--text-black d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_corporate_red.webp">
-                                <p>Outboard motos</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="products__logo products__logo--red products__logo--top products__logo--arrow-red products__logo--text-white d-flex justify-content-center align-items-center flex-column vh-1-3">
-                                <img src="./images/logo/logo_honda_racing.webp">
-                                <p>Auto racing</p>
-                                <span>GO</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="products__item products__item--5 products__logo products__logo--dark products__logo--left products__logo--lg-left products__logo--sm-right products__logo--text-white d-flex justify-content-center align-items-center flex-column animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_acura.webp">
+                    <p>Acura autos</p>
+                    <span>GO</span>
+                </div>
+
+                <div class="products__item products__item--6 products__img animate__animated animate__fadeInUp wow"><img class="img-animation img-fluid" src="./images/hinh8.webp" alt="h8">
+                </div>
+
+                <div class="products__item products__item--7 products__logo products__logo--light products__logo--bottom  products__logo--lg-bottom products__logo--sm-left products__logo--text-black d-flex justify-content-center align-items-center flex-column products__logo__arrow-fix--1 animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_corporate_red.webp">
+                    <p>Generators, mowers & power equipment</p>
+                    <span>GO</span>
+                </div>
+
+                <div class="products__item products__item--8 products__img animate__animated animate__fadeInUp wow"><img class="img-animation img-fluid" src="./images/hinh14.jpg" alt="h14">
+                </div>
+
+                <div class="products__item products__item--9 products__logo products__logo--red products__logo--right products__logo--lg-right products__logo--sm-right products__logo--text-white d-flex justify-content-center align-items-center flex-column animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_autos.webp">
+                    <p>General purpose engines</p>
+                    <span>GO</span>
+                </div>
+                <div class="products__item products__item--10 products__img animate__animated animate__fadeInUp wow">
+                    <img class="img-animation img-fluid" src="./images/hinh11.jpg" alt="h11">
+                </div>
+
+                <div class="products__item products__item--11 products__logo products__logo--light products__logo--left products__logo--lg-left products__logo--sm-left products__logo--text-black d-flex justify-content-center align-items-center flex-column animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_corporate_red.webp">
+                    <p>Outboard motos</p>
+                    <span>GO</span>
+                </div>
+
+                <div class="products__item products__item--12 products__img animate__animated animate__fadeInUp wow">
+                    <img class="img-animation img-fluid" src="./images/hinh13.webp" alt="h13">
+                </div>
+
+                <div class="products__item products__item--13 products__logo products__logo--red products__logo--right products__logo--lg-left products__logo--sm-right products__logo--text-white d-flex justify-content-center align-items-center flex-column animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_jet.webp">
+                    <p>Honda aircraft company</p>
+                    <span>GO</span>
+                </div>
+
+                <div class="products__item products__item--14 products__img animate__animated animate__fadeInUp wow">
+                    <img class="img-animation img-fluid" src="./images/hinh12.jpg" alt="h12">
+                </div>
+
+                <div class="products__item products__item--15 products__logo products__logo--red products__logo--top products__logo--lg-right products__logo--sm-left products__logo--text-white d-flex justify-content-center align-items-center flex-column products__logo__arrow-fix--2 animate__animated animate__fadeInUp wow">
+                    <img src="./images/logo/logo_honda_racing.webp">
+                    <p>Auto racing</p>
+                    <span>GO</span>
+                </div>
+
+                <div class="products__item products__item--16 products__img animate__animated animate__fadeInUp wow">
+                    <img class="img-animation img-fluid" src="./images/hinh9.jpg" alt="h9">
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- COMPANY -->
@@ -303,10 +279,7 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6 company__item">
-                        <div class="company__img">
-                            <img class="img-fluid" src="./images/hinh20.jpg" alt="h20">
-                        </div>
+                    <div class="col-md-6 col-12 company__item company__item--1 animate__animated animate__fadeInUp wow animation-delay--1">
                         <h1 class="company__item__title title title-1 text-white mb-4">
                             Mobility
                         </h1>
@@ -318,10 +291,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 company__item">
-                        <div class="company__img">
-                            <img class="img-fluid" src="./images/hinh19.jpg" alt="h19">
-                        </div>
+                    <div class="col-md-6 col-12 company__item company__item--2 animate__animated animate__fadeInUp wow animation-delay--2">
                         <h1 class="company__item__title title title-1 text-white mb-4">
                             Environment
                         </h1>
@@ -333,10 +303,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 company__item">
-                        <div class="company__img">
-                            <img class="img-fluid" src="./images/hinh18.jpg" alt="h18">
-                        </div>
+                    <div class="col-md-6 col-12 company__item company__item--3 animate__animated animate__fadeInUp wow animation-delay--1">
                         <h1 class="company__item__title title title-1 text-white mb-4">
                             Community
                         </h1>
@@ -348,10 +315,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 company__item">
-                        <div class="company__img">
-                            <img class="img-fluid" src="./images/hinh21.jpg" alt="h21">
-                        </div>
+                    <div class="col-md-6 col-12 company__item company__item--4 animate__animated animate__fadeInUp wow animation-delay--2">
                         <h1 class="company__item__title title title-1 text-white mb-4">
                             Safety
                         </h1>
@@ -366,17 +330,19 @@
             </div>
         </main>
     </section>
+
     <!-- POWER -->
-    <section class="power">
+    <section class="power animate__animated animate__fadeInUp wow">
         <header>
             <div class="power__content text-center">
                 <h1 class="power__title title title-1 text-black">The power of dreams</h1>
                 <p class="mb-4">See what makes a Honda, who makes a Honda, how we got here, and where we're headed.</p>
-                <a class="links text-black py-2" href="">More
+                <a class="links py-2" href="">More
                     <i class="fa fa-angle-right"></i></a>
             </div>
         </header>
     </section>
+
     <!-- WHAT -->
     <section class="what">
         <header>
@@ -389,9 +355,9 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4 what__item">
-                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh16.jpg" alt="h16"></a>
-                        <div class="what__info text-center">
+                    <div class="col-12 col-md-6 col-xl-4 what__item animate__animated animate__fadeInUp wow">
+                        <div href="#" class="what__img"><img class="img-fluid img-animation" src="./images/hinh16.jpg" alt="h16"></div>
+                        <div class="what__info text-center h-100">
                             <h1 class="title title-2 what__info__title mb-4">Honda collection hall</h1>
                             <p class="mb-2">
                                 Explore hundreds of our storied creations in this 360<sup>°</sup> immersive experience.
@@ -400,10 +366,10 @@
                         </div>
                     </div>
 
-                    <div class="col-4 what__item">
-                        <a href="#" class="what__img"><img class="img-fluid" src="./images/podcast-logo.webp" alt="podcast">
-                        </a>
-                        <div class="what__info text-center">
+                    <div class="col-12 col-md-6 col-xl-4 what__item animate__animated animate__fadeInUp wow">
+                        <div href="#" class="what__img"><img class="img-fluid img-animation" src="./images/podcast-logo.webp" alt="podcast">
+                        </div>
+                        <div class="what__info text-center h-100">
                             <h1 class="title title-2 what__info__title mb-4">Honda stories</h1>
                             <p class="mb-2">
                                 Go behind the badge and into the world of Honda Stories. Hear an inside look at Honda from a wide variety of people including company, industry experts and championship drivers.
@@ -412,10 +378,10 @@
                         </div>
                     </div>
 
-                    <div class="col-4 what__item">
-                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh7.webp" alt="h7">
-                        </a>
-                        <div class="what__info text-center">
+                    <div class="col-12 col-md-6 col-xl-4 what__item animate__animated animate__fadeInUp wow">
+                        <div href="#" class="what__img"><img class="img-fluid img-animation" src="./images/hinh7.webp" alt="h7">
+                        </div>
+                        <div class="what__info text-center h-100">
                             <h1 class="title title-2 what__info__title mb-4">Interior design philosophy</h1>
                             <p class="mb-2">
                                 Honda showcases a new interior design philosophy that will shape the styling of future Honda models.
@@ -424,18 +390,19 @@
                         </div>
                     </div>
 
-                    <div class="col-4 what__item">
-                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh4.jpg" alt="h4"></a>
+                    <div class="col-12 col-md-6 col-xl-4 what__item  animate__animated animate__fadeInUp wow">
+                        <div href="#" class="what__img "><img class="img-fluid img-animation" src="./images/hinh4.jpg" alt="h4">
+                        </div>
                         <div class="what__icon what__icon__ins">
                             <i class="fab fa-instagram"></i>
                         </div>
                     </div>
 
-                    <div class="col-4 what__item">
+                    <div class="col-12 col-md-6 col-xl-4 what__item animate__animated animate__fadeInUp wow">
                         <div class="what__content p-5 h-100">
                             <header class="d-flex justify-content-start align-items-center what__content__header">
                                 <img class="what__content__logo img-fluid" src="./images/acura-logo.png" alt="logo">
-                                <div class="what__content__name ms-5">
+                                <div class="what__content__name ms-4 ms-sm-5">
                                     <p><a href="#">Acura</a></p>
                                     <span><a href="#">@Acura</a></span>
                                 </div>
@@ -460,8 +427,8 @@
                         </div>
                     </div>
 
-                    <div class="col-4 what__item">
-                        <a href="#" class="what__img"><img class="img-fluid" src="./images/hinh5.jpg" alt="h5"></a>
+                    <div class="col-12 col-md-6 col-xl-4 what__item animate__animated animate__fadeInUp wow">
+                        <div href="#" class="what__img"><img class="img-fluid img-animation" src="./images/hinh5.jpg" alt="h5"></div>
                         <div class="what__icon what__icon__ins">
                             <i class="fab fa-instagram"></i>
                         </div>
@@ -471,219 +438,312 @@
         </main>
     </section>
     <!-- FOOTER -->
-    <footer class="footer" id="footer">
+    <footer class="footer animate__animated animate__fadeInUp wow" id="footer">
         <div class="container-fluid mx-auto px-0">
             <div class="row">
-                <article class="footer__links col-4">
-                    <h1 class="footer__title">Our brands</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>Honda autos</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Acura autos</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda powersports</p> <i class="fa fa-angle-right"></i>
-                                <p>Motorcycles, ATVs, Scooters, SxS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda power Equipment</p> <i class="fa fa-angle-right"></i>
-                                <p>Generators, lawn mowers, pumps, snow blowers, tillers, trimmers</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda engines</p> <i class="fa fa-angle-right"></i>
-                                <p>Small engines, manuals, parts & resources</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda marine</p> <i class="fa fa-angle-right"></i>
-                                <p>Outboard motors, parts & accessories</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>HondaJet</p> <i class="fa fa-angle-right"></i>
-                                <p>Honda aircraft company</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>ASIMO</p> <i class="fa fa-angle-right"></i>
-                                <p>The world's most advanced humanoid robot</p>
-                            </a>
-                        </li>
-                    </ul>
+                <article class="footer__links col-lg-4 col-md-6">
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">Our brands</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Honda autos</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura autos</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda powersports</p> <i class="fa fa-angle-right"></i>
+                                    <p>Motorcycles, ATVs, Scooters, SxS</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda power Equipment</p> <i class="fa fa-angle-right"></i>
+                                    <p>Generators, lawn mowers, pumps, snow blowers, tillers, trimmers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda engines</p> <i class="fa fa-angle-right"></i>
+                                    <p>Small engines, manuals, parts & resources</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda marine</p> <i class="fa fa-angle-right"></i>
+                                    <p>Outboard motors, parts & accessories</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>HondaJet</p> <i class="fa fa-angle-right"></i>
+                                    <p>Honda aircraft company</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>ASIMO</p> <i class="fa fa-angle-right"></i>
+                                    <p>The world's most advanced humanoid robot</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__links__item d-lg-none">
+                        <h1 class="footer__title">Racing</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Auto racing</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Motorcycle racing</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer__links__item d-lg-none">
+                        <h1 class="footer__title">Recalls</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Honda recalls </p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Powersports recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Power equipment recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Marine recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Engines recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footer__links__item d-lg-none">
+                        <h1 class="footer__title">Services</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Honda financial services</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda owners</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura financial services</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura owners</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </article>
 
-                <article class="footer__links col-4">
-                    <h1 class="footer__title">About us</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>The power of dreams</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Mobility</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Environment</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Community</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Safety</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>History</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Operations</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Careers</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <article class="footer__links col-lg-4 col-md-6">
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">About us</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>The power of dreams</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Mobility</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Environment</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Community</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Safety</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>History</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Operations</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Careers</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h1 class="footer__title">More to explore</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>Research & development</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda in america</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Corporate social responsibility</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda worldwide</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Investor relations</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Media newsroom </p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">More to explore</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Research & development</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda in america</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Corporate social responsibility</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda worldwide</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Investor relations</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Media newsroom </p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
+
                 </article>
 
-                <article class="footer__links col-4">
-                    <h1 class="footer__title">Racing</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>Auto racing</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Motorcycle racing</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
+                <article class="footer__links col-lg-4 d-none d-lg-block ">
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">Racing</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Auto racing</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Motorcycle racing</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
 
-                    <h1 class="footer__title">Recalls</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>Honda recalls </p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Acura recalls</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Powersports recalls</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Power equipment recalls</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Marine recalls</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Engines recalls</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">Recalls</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Honda recalls </p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Powersports recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Power equipment recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Marine recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Engines recalls</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h1 class="footer__title">Services</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>Honda financial services</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Honda owners</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Acura financial services</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Acura owners</p> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="footer__links__item">
+                        <h1 class="footer__title">Services</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>Honda financial services</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Honda owners</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura financial services</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Acura owners</p> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </article>
             </div>
 
-            <div class="footer__social d-flex align-items-center justify-content-center mb-3">
+            <div class="footer__social d-flex align-items-center justify-content-center flex-wrap mb-3">
                 <a href="#">
                     <img src="./images/footer/footer-twitter.png" alt="twitter">
                 </a>
@@ -716,20 +776,20 @@
                     </p>
                     <p class="footer__terms">
                         <a href="#">Vehicle
-                            Data Privacy</a>
+                            Data Privacy</a> |
                         <a href="#">SMS
-                            Terms and Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Do Not Sell My Personal Information</a>
-                        <a href="#">Legal Terms and Conditions</a>
+                            Terms and Conditions</a> |
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Do Not Sell My Personal Information</a> |
+                        <a href="#">Legal Terms and Conditions</a> |
                         <a href="#">Prop 65 Info</a>
                     </p>
-                    <p>We use cookies to improve your experience on this site and show you personalized advertising. To find out more, read our <a href="#"> cookie policy</a>.</p>
+                    <p>We use cookies to improve your experience on this site and show you personalized advertising. To find out more, read our <a class="mx-0" href="#"> cookie policy</a>.</p>
 
                 </div>
-                <div class="footer__final-links d-flex justify-content-center align-items-center pt-3 pb-5">
-                    <a href="#">Site Map</a>
-                    <a href="#">Honda Licensing</a>
+                <div class="footer__final-links pt-3 pb-5">
+                    <a href="#">Site Map</a> |
+                    <a href="#">Honda Licensing</a> |
                     <a href="#">Contact Us</a>
                 </div>
             </div>
@@ -754,7 +814,38 @@
             speed: 300,
             slidesToShow: 1,
             fade: true,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    dots: false,
+                }
+            }]
         });
+    </script>
+
+    <!-- JS WOW LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        // const btnOpen = document.querySelector('.js-open')
+        // const btnClose = document.querySelector('.js-close')
+        // if (btnClose.style.display === 'none') {
+        //     btnOpen.addEventListener('click', function() {
+        //         btnOpen.style.display = 'none'
+        //         btnClose.style.display = 'block'
+        //         console.log("a")
+        //     })
+        // }
+        // if (btnOpen.style.display === 'none') {
+        //     btnClose.addEventListener('click', function() {
+        //         btnClose.style.display = 'none'
+        //         btnOpen.style.display = 'block'
+        //         console.log("b")
+        //     })
+        // }
     </script>
 </body>
 
