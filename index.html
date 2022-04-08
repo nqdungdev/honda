@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>American Honda Motor Co., Inc. - Official Site</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -25,8 +29,9 @@
         <nav class="navbar h-100">
             <div class="container-fluid h-100">
                 <!-- menu-btn -->
-                <button class="navbar-toggler header__menu d-flex justify-content-start align-items-center" data-bs-toggle="collapse" data-bs-target="#aside">
-                    <i class="me-2 fa fa-bars"></i>
+                <button class="navbar-toggler header__menu d-flex justify-content-start align-items-center js-click" data-bs-toggle="collapse" data-bs-target="#aside">
+                    <i class="js-open me-2 fa fa-bars"></i>
+                    <i class="js-close fa fa-times" style="display: none;"></i>
                     <span class="d-none d-sm-block">Menu</span>
                 </button>
 
@@ -39,7 +44,7 @@
                         About Us
                     </a>
                     <!-- search-btn -->
-                    <button class="btn-search navbar-toggler" data-bs-toggle="collapse" data-bs-target="#searchBar">
+                    <button class="btn-search navbar-toggler  js-click" data-bs-toggle="collapse" data-bs-target="#searchBar">
                         <i class="js-open fa fa-search"></i>
                         <i class="js-close fa fa-times" style="display: none;"></i>
                     </button>
@@ -69,8 +74,9 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#ourBrands">
-                        <i class="fa fa-plus"></i> Our brands</a>
+                    <a href="#" class="js-click nav-link navbar-toggler d-flex" data-bs-toggle="collapse" data-bs-target="#ourBrands">
+                        <i class="js-open fa fa-plus"></i>
+                        <i class="js-close fa fa-minus" style="display: none;"></i> Our brands</a>
                     <ul class="collapse navbar-collapse" id="ourBrands">
                         <li><a href="#">Honda Autos</a></li>
                         <li><a href="#">Acura Autos</a></li>
@@ -84,8 +90,9 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#aboutUs">
-                        <i class="fa fa-plus"></i>About us</a>
+                    <a href="#" class="js-click nav-link navbar-toggler d-flex" data-bs-toggle="collapse" data-bs-target="#aboutUs">
+                        <i class="js-open fa fa-plus"></i>
+                        <i class="js-close fa fa-minus" style="display: none;"></i>About us</a>
                     <ul class="collapse navbar-collapse" id="aboutUs">
                         <li><a href="#">The Power of Dreams</a></li>
                         <li><a href="#">Mobility</a></li>
@@ -100,8 +107,9 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#racing">
-                        <i class="fa fa-plus"></i>Racing</a>
+                    <a href="#" class="js-click nav-link navbar-toggler d-flex" data-bs-toggle="collapse" data-bs-target="#racing">
+                        <i class="js-open fa fa-plus"></i>
+                        <i class="js-close fa fa-minus" style="display: none;"></i>Racing</a>
                     <ul class="collapse navbar-collapse" id="racing">
                         <li><a href="#">Auto Racing</a></li>
                         <li><a href="#">Motorcycle Racing</a></li>
@@ -110,8 +118,9 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#recalls">
-                        <i class="fa fa-plus"></i>Recalls</a>
+                    <a href="#" class="js-click nav-link navbar-toggler d-flex" data-bs-toggle="collapse" data-bs-target="#recalls">
+                        <i class="js-open fa fa-plus"></i>
+                        <i class="js-close fa fa-minus" style="display: none;"></i>Recalls</a>
                     <ul class="collapse navbar-collapse" id="recalls">
                         <li><a href="#">Honda Recalls</a></li>
                         <li><a href="#">Acura Recalls</a></li>
@@ -123,8 +132,9 @@
                 </div>
 
                 <div class="header__aside__item">
-                    <a href="#" class="nav-link navbar-toggler" data-bs-toggle="collapse" data-bs-target="#services">
-                        <i class="fa fa-plus"></i>Services</a>
+                    <a href="#" class="js-click nav-link navbar-toggler d-flex" data-bs-toggle="collapse" data-bs-target="#services">
+                        <i class="js-open fa fa-plus"></i>
+                        <i class="js-close fa fa-minus" style="display: none;"></i>Services</a>
                     <ul class="collapse navbar-collapse" id="services">
                         <li><a href="#">Honda Financial Services</a></li>
                         <li><a href="#">Honda Owners</a></li>
@@ -437,6 +447,7 @@
             </div>
         </main>
     </section>
+
     <!-- FOOTER -->
     <footer class="footer animate__animated animate__fadeInUp wow" id="footer">
         <div class="container-fluid mx-auto px-0">
@@ -795,6 +806,7 @@
             </div>
         </div>
     </footer>
+    <!-- <div class="body__stretch"></div> -->
 
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -807,6 +819,9 @@
             dots: true,
             speed: 300,
             slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            fade: true,
         });
         $('.alert-bar__items').slick({
             dots: true,
@@ -830,22 +845,31 @@
         new WOW().init();
     </script>
     <script>
-        // const btnOpen = document.querySelector('.js-open')
-        // const btnClose = document.querySelector('.js-close')
-        // if (btnClose.style.display === 'none') {
-        //     btnOpen.addEventListener('click', function() {
-        //         btnOpen.style.display = 'none'
-        //         btnClose.style.display = 'block'
-        //         console.log("a")
-        //     })
-        // }
-        // if (btnOpen.style.display === 'none') {
-        //     btnClose.addEventListener('click', function() {
-        //         btnClose.style.display = 'none'
-        //         btnOpen.style.display = 'block'
-        //         console.log("b")
-        //     })
-        // }
+        const btnClicks = document.querySelectorAll('.js-click')
+        for (const btnClick of btnClicks) {
+            const btnOpen = btnClick.querySelector('.js-open')
+            const btnClose = btnClick.querySelector('.js-close')
+            console.log(btnClick.querySelector('.js-open'))
+            console.log(btnClick.querySelector('.js-close'))
+            btnClick.addEventListener('click', function() {
+                if (btnClose.style.display === 'none') {
+                    btnOpen.classList.add('animation-rotate')
+                    btnClose.classList.remove('animation-rotate')
+                    setTimeout(function() {
+                        btnOpen.style.display = 'none'
+                        btnClose.style.display = 'block'
+                    }, 200)
+                }
+                if (btnOpen.style.display === 'none') {
+                    btnClose.classList.add('animation-rotate')
+                    btnOpen.classList.remove('animation-rotate');
+                    setTimeout(function() {
+                        btnClose.style.display = 'none'
+                        btnOpen.style.display = 'block'
+                    }, 200)
+                }
+            })
+        }
     </script>
 </body>
 
